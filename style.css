@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    position: relative;
+}
+
+.weather-app {
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #222;
+    font-size: 36px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #0056b3;
+}
+
+#weatherResult {
+    padding: 20px;
+    border-radius: 18px;
+    background: #f5f9ff;
+}
+
+#weatherResult h2 {
+    margin-bottom: 12px;
+}
+
+#weatherResult h3 {
+    font-size: 28px;
+    margin: 12px;
+}
+
+#weatherResult p {
+    margin: 8px;
+    color: #555;
+}
+
+#forecast {
+    margin-top: 25px;
+}
+
+.forecast-title {
+    margin-bottom: 15px;
+}
+
+.forecast-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.forecast-card {
+    background: white;
+    padding: 12px 8px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card p {
+    margin: 7px 0;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .weather-app {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .forecast-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.designer-credit {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+}
